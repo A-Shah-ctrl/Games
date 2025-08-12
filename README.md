@@ -1,6 +1,6 @@
 #  Python-based Games
 ‼️Update in progress <br>
-This repository is a collection of Python-based games I created as (1) side projects (2) as a part of programming courses (3) as a part of hackathons. Each game is self-contained and includes its own requirements.
+This repository is a collection of Python-based games I created in undergrad as (1) side projects (2) as a part of programming courses (3) as a part of hackathons. Each game is self-contained and includes its own requirements.
 
 ## Games Included
 
