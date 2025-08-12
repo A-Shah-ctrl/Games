@@ -2,7 +2,7 @@
 ‼️Update in progress <br>
 This repository is a collection of Python-based games I created as (1) side projects (2) as a part of programming courses (3) as a part of hackathons. Each game is self-contained and includes its own requirements.
 
-## 🎮Games Included
+## Games Included
 
 ### Unbeatable Tic Tac Toe
 This is a Python-based Tic Tac Toe game featuring two modes:
@@ -13,7 +13,7 @@ The AI opponent was implemented using the minimax algorithm as part of course wo
 
 📁 `Unbeatable-Tic-Tac-Toe`
 
-## 🚀 How to Run
+## How to Run
 
 1. Install Python 3.8
 2. Install dependencies listed in the game folder (e.g. `pip install -r requirements.txt`)
