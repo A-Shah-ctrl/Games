@@ -1,8 +1,5 @@
 ## Demo
-<video width="640" height="360" controls>
-  <source src="tictactoe-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Demo Preview](tictactoe-demo.gif)
 
 ## Features
 
