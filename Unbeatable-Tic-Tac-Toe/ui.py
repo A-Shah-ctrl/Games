@@ -49,6 +49,8 @@ class GameScreen(tk.Frame):
         self.turn_label.grid(row=4, column=0, columnspan=3, sticky="nsew")
         self.reset_button = tk.Button(self, text="Reset", bg="black", fg="white", command=lambda: self.window.start_game(self.mode))
         self.reset_button.grid(row=5, column=0, columnspan=1, sticky="nsew")
+        self.reset_button = tk.Button(self, text="Play Again", bg="black", fg="white", command=self.window.show_start_screen)
+        self.reset_button.grid(row=5, column=1, columnspan=1, sticky="nsew")
         self.reset_button = tk.Button(self, text="Quit", bg="black", fg="white", command=self.window.quit)
         self.reset_button.grid(row=5, column=2, columnspan=1, sticky="nsew")
 
@@ -75,11 +77,11 @@ class GameScreen(tk.Frame):
             if self.mode == "ai" and self.current_turn == "O":
                 action = minimax(self.board)
                 self.turn_label.configure(text="Hmmm.. let me think".format(self.current_turn))
-                self.after(3000, lambda: self.pause(action))
+                self.after(1000, lambda: self.pause(action))
         else:
             who_wins = winner(self.board)
             self.turn_label.configure(text="{} wins! Game over.".format(who_wins))  
-            self.after(1000, self.window.quit) 
+            self.disable_buttons()
     
     def pause(self, action):
         self.buttons[action[0]][action[1]].configure(text=self.current_turn, state="disabled") 
@@ -91,8 +93,8 @@ class GameScreen(tk.Frame):
             self.turn_label.configure(text="{}'s turn".format(self.current_turn))
         else:
             who_wins = winner(self.board)
-            self.turn_label.configure(text="{} wins! Game over.".format(who_wins))  
-            self.after(1000, self.window.quit)  
+            self.turn_label.configure(text="{} wins! Game over.".format(who_wins))   
+            self.disable_buttons()
 
 class TicTacToe(tk.Tk):
     def __init__(self):
@@ -104,6 +106,8 @@ class TicTacToe(tk.Tk):
         self.show_start_screen()
 
     def show_start_screen(self):
+        if self.frames.get("GameScreen"):
+            self.frames["GameScreen"].destroy()
         self.frames["StartScreen"] = StartScreen(self)
         self.frames["StartScreen"].pack(fill="both", expand=True)
         self.frames["StartScreen"].tkraise()
