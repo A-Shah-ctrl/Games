@@ -13,12 +13,6 @@ The AI opponent was implemented using the minimax algorithm as part of course wo
 
 📁 `Unbeatable-Tic-Tac-Toe`
 
-### ⚛️ Quantum Tic Tac Toe
-This is a Python-based Quantum Tic Tac Toe game. A twist on the classic game using quantum mechanics-inspired rules. It has a two-player mode only.
-
-This game was developed in collaboration with two other students as part of the PyJaC hackathon hosted at the University of Toronto Mississauga.
-
-
 ## 🚀 How to Run
 
 1. Install Python 3.8
